@@ -14,7 +14,23 @@ const client = new Client({
   },
 });
 
-// Get all articles
+/**
+* @api {get} /articles/ Get all articles
+* @apiVersion 1.0.0
+* @apiName GetArticles
+* @apiGroup Articles
+* @apiHeader {String="application/json"} Content-Type Content type of the request.
+* @apiSuccess {Array[Object]} articles Array of Article objects.
+* @apiSuccessExample {json} Success-Response:
+*     HTTP 200 OK
+*     {
+*      [
+*       {},
+*       {}
+*       ...
+*      ]
+*     }
+*/
 router.get("/", async (req, res) => {
   try {
     const results = await client.search({
