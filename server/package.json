@@ -4,8 +4,12 @@
   "description": "Covid Whisperer API server",
   "main": "index.js",
   "scripts": {
-    "start": "node .",
-    "dev:server": "nodemon server"
+    "start": "node index.js",
+    "dev": "nodemon index.js",
+    "docs": "apidoc -i routes/ -o docs/",
+    "test": "npm run test:server",
+    "test:server": "npm run lint:server && cross-env PORT=0 nyc --reporter=lcov ava --verbose -s",
+    "lint:server": "eslint ."
   },
   "repository": {
     "type": "git",
@@ -19,13 +23,36 @@
   "homepage": "https://github.com/johnantonn/covid-whisperer#readme",
   "dependencies": {
     "@elastic/elasticsearch": "^7.6.1",
+    "apidoc": "^0.20.1",
     "body-parser": "^1.19.0",
     "chalk": "^4.0.0",
     "cluster": "^0.7.7",
     "compression": "^1.7.4",
     "dotenv": "^8.2.0",
     "express": "^4.17.1",
-    "nodemon": "^2.0.3",
-    "os": "^0.1.1"
+    "nodemon": "^2.0.3"
+  },
+  "apidoc": {
+    "title": "Covid Whisperer API",
+    "template": {
+      "forceLanguage": "en",
+      "withCompare": false,
+      "withGenerator": false
+    }
+  },
+  "devDependencies": {
+    "ava": "^3.7.1",
+    "babel-eslint": "^10.1.0",
+    "cross-env": "^7.0.2",
+    "eslint": "^6.0.1",
+    "eslint-config-airbnb": "^17.1.1",
+    "eslint-config-iamnapo": "^1.0.5",
+    "eslint-plugin-ava": "^7.1.0",
+    "eslint-plugin-import": "^2.18.0",
+    "eslint-plugin-jsx-a11y": "^6.2.3",
+    "eslint-plugin-react": "^7.14.2",
+    "eslint-plugin-react-hooks": "^2.0.1",
+    "nyc": "^15.0.1",
+    "supertest": "^4.0.2"
   }
 }
