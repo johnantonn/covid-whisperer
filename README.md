@@ -1,5 +1,5 @@
 # Covid Whisperer
-A platform that detects fake news and provides unbiased, personalised covid-19 updates based on sentiment text analysis.
+A news platform/aggregator for COVID-19 that provides personalised updates based on fake news detection and sentiment text analysis.
 
 ## Description
 A description of the system.
