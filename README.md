@@ -20,6 +20,11 @@ More specifically, this set of algorithms are responsible for providing:
 - intelligent techniques for the detection of fake news in the displayed content.
 - indicators of emotional vocabulary in the displayed content.
 
+## Architecture
+The system architecture diagram is provided below.
+
+![alt text]()
+
 ## Implementation
 Below there is a short description of the various components of the *Covid Whisperer* application.
 
