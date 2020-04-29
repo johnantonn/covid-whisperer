@@ -23,3 +23,6 @@ To be updated soon.
 
 ## Front-end
 To be updated soon.
+
+## How to run
+To be updated soon.
