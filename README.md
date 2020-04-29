@@ -1,7 +1,8 @@
 # Covid Whisperer
-A news hub platform that provides personalised updates on COVID-19, based on fake news detection and sentiment text analysis.
+A news hub platform that provides personalised updates on COVID-19, based on fake news detection and sentiment text analysis. 
 
 ## Description
+This project was inspired during the [EUvsVirus pan-European hackathon](https://euvsvirus.org/) that took place on 24-26 April 2020 with the purpose of connecting civil society, innovators, partners and investors across Europe in order to develop innovative solutions for coronavirus-related challenges.
 
 ### The problem
 In a global crisis, like this pandemic, it's not a difficult task to take a moment, look around and observe other people's reactions. Most of us strive to get information about the COVID-19, countless times per day, about what is happening, how it will affect our future or when we will get back to our regular lives. We realised that the most crucial thing in a situation like this is how you deliver the message. We all agree that news travels extremely fast, and we need valid information in order to make decisions and plans. We believe in the simple, not the complex. We believe that we need to own and control the way we get informed.
