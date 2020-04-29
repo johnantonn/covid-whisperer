@@ -28,19 +28,19 @@ The system architecture diagram is provided below.
 
 Below there is a short description of the various components of the *Covid Whisperer* architecture.
 
-### Elasticsearch
+## Elasticsearch
 Elasticsearch server is used to store the articles retrieved by the online news APIs, as well as for basic search capabilities and analytics calculation, via its RESTful API. To that aim, the news articles and their metadata are used by the back-end components to calculate indicators and metrics related to fake news, sentiment and other statistics.
 
-### Server API
+## Server API
 The back-end server was built using Node.js and Express.js with the purpose to server the incoming requests.
 
-### Sentiment analysis module
+## Sentiment analysis module
 To be updated soon.
 
-### Fake news detection module
+## Fake news detection module
 To be updated soon.
 
-### User interface
+## User interface
 To be updated soon.
 
 # How to run
