@@ -1,6 +1,6 @@
 ![alt text](https://github.com/johnantonn/covid-whisperer/blob/master/cwlogo-horizontal.png)
 
-**Covid Whisperer** is news platform that provides personalised updates on COVID-19 based on fake news detection and sentiment text analysis. 
+**Covid Whisperer** is a news platform that provides personalised updates on COVID-19 based on fake news detection and sentiment text analysis. 
 
 # Description
 This project was inspired during the [EUvsVirus pan-European hackathon](https://euvsvirus.org/) that took place on 24-26 April 2020 with the purpose of connecting civil society, innovators, partners and investors across Europe in order to develop innovative solutions for coronavirus-related challenges.
