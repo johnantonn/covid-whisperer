@@ -25,7 +25,6 @@ The system architecture diagram is provided below.
 
 ![alt text](https://github.com/johnantonn/covid-whisperer/blob/master/arcitecture.png)
 
-### Components
 Below there is a short description of the various components of the *Covid Whisperer* architecture.
 
 #### Elasticsearch
@@ -41,6 +40,7 @@ To be updated soon.
 To be updated soon.
 
 #### User interface
+To be updated soon.
 
 ## How to run
 To be updated soon.
