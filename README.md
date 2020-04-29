@@ -20,8 +20,8 @@ More specifically, this set of algorithms are responsible for providing:
 - intelligent techniques for the detection of fake news in the displayed content.
 - indicators of emotional vocabulary in the displayed content.
 
-## Back-end
-Below there is a short description of the various back-end components of the *Covid Whisperer* application.
+## Implementation
+Below there is a short description of the various components of the *Covid Whisperer* application.
 
 ### Elasticsearch
 Elasticsearch server is used to store the articles retrieved by the online news APIs, as well as for basic search capabilities and analytics calculation, via its RESTful API. To that aim, the news articles and their metadata are used by the back-end components to calculate indicators and metrics related to fake news, sentiment and other statistics.
@@ -33,9 +33,6 @@ The back-end server was built using Node.js and Express.js with the purpose to s
 To be updated soon.
 
 ### Fake news detection module
-To be updated soon.
-
-## Front-end
 To be updated soon.
 
 ## How to run
