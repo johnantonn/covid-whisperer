@@ -1,10 +1,24 @@
 # Covid Whisperer
-A news platform/aggregator for COVID-19 that provides personalised updates based on fake news detection and sentiment text analysis.
+A news hub platform that provides personalised updates on COVID-19, based on fake news detection and sentiment text analysis.
 
 ## Description
-Covid Whisperer is an initiative to empower every person to have a personalised news hub/aggregator, where they can come to find and discover unbiased COVID-19 updates without being confused by the massive amount of information or getting stressed by the overwhelming content.
 
-The system is based on novel techniques for fake news detection and sentiment analysis of news articles related to COVID-19. This functionality is provided via respective back-end modules (more details expected soon). Elasticsearch is used as a storage and search engine for the news articles, which are made available to the back-end modules and the front-end clients via a dedicated API, developed in node.js and express.js. The front-end is implemented as a React single page application.
+### The problem
+In a global crisis, like this pandemic, it's not a difficult task to take a moment, look around and observe other people's reactions. Most of us strive to get information about the COVID-19, countless times per day, about what is happening, how it will affect our future or when we will get back to our regular lives. We realised that the most crucial thing in a situation like this is how you deliver the message. We all agree that news travels extremely fast, and we need valid information in order to make decisions and plans. We believe in the simple, not the complex. We believe that we need to own and control the way we get informed.
+
+That's why we came up with an initiative to empower every person to have a personalised news hub, where they can come to find and discover unbiased COVID-19 updates without being confused by the massive amount of information or getting stressed by the overwhelming content.
+
+We introduce "Covid Whisperer".
+
+### The solution
+Covid Whisperer is a news platform that provides COVID-19 related content based on fake news detection and sentiment analysis in combination with the user's personal preferences. The envisioned solution can be considered a hub, where news articles from a large number of sources are aggregated and displayed in a comprehensive and meaningful way for each user, with the assistance of intelligent algorithms.
+
+More specifically, this set of algorithms are responsible for providing:
+
+- up-to-date and reliable content related to the COVID-19 pandemic from various sources.
+- intelligent techniques for the detection of fake news in the displayed content.
+- indicators of emotional vocabulary in the displayed content.
+
 
 ## Back-end
 Below there is a short description of the various back-end components of the Covid Whisperer application.
