@@ -8,7 +8,7 @@ In a global crisis, like this pandemic, it's not a difficult task to take a mome
 
 That's why we came up with an initiative to empower every person to have a personalised news hub, where they can come to find and discover unbiased COVID-19 updates without being confused by the massive amount of information or getting stressed by the overwhelming content.
 
-We introduce "Covid Whisperer".
+We introduce `Covid Whisperer`.
 
 ### The solution
 Covid Whisperer is a news platform that provides COVID-19 related content based on fake news detection and sentiment analysis in combination with the user's personal preferences. The envisioned solution can be considered a hub, where news articles from a large number of sources are aggregated and displayed in a comprehensive and meaningful way for each user, with the assistance of intelligent algorithms.
@@ -18,7 +18,6 @@ More specifically, this set of algorithms are responsible for providing:
 - up-to-date and reliable content related to the COVID-19 pandemic from various sources.
 - intelligent techniques for the detection of fake news in the displayed content.
 - indicators of emotional vocabulary in the displayed content.
-
 
 ## Back-end
 Below there is a short description of the various back-end components of the Covid Whisperer application.
