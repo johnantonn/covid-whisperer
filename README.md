@@ -1,4 +1,4 @@
-![alt text](https://github.com/johnantonn/covid-whisperer/blob/master/cwlogo-horizontal.jpg)
+![alt text](https://github.com/johnantonn/covid-whisperer/blob/master/cwlogo-horizontal.png)
 
 **Covid Whisperer** is news platform that provides personalised updates on COVID-19 based on fake news detection and sentiment text analysis. 
 
