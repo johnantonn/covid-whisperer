@@ -36,7 +36,8 @@ router.get("/", async (req, res) => {
     const results = await client.search({
       index: process.env.ELASTICSEARCH_INDEX_NAME,
     });
-    return res.status(200).json({ ok: true, results });
+    const hits = results.body.hits.hits;
+    return res.status(200).json({ ok: true, body: "List of articles!" });
   } catch (error) {
     return res.status(500).json({ ok: false, message: error.message });
   }
