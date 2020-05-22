@@ -44,4 +44,19 @@ To be updated soon.
 To be updated soon.
 
 # How to run
+Steps to build and spin up the different modules of the application.
+
+## Python script to retrieve news articles using News API
+The script will retrieve a number of articles from the News API and store them to the cloud Elasticsearch instance. Python 3.6 is required.
+ - Install the dependencies listed in the requirements.txt file inside the `server` directory
+ - Set the variable required variables inside .env file
+ - Execute the `get_news_api.py` script
+
+## Server
+Node.js and npm are required. After installing these dependencies, clone the repo locally and follow the steps below:
+ - Go to `server` directory and install the server's dependencies using `npm i`
+ - Set up the .env file
+ - Spin up the server using `npm start` for production mode or `npm run dev` for development mode.
+
+## News Platform UI
 To be updated soon.
