@@ -53,7 +53,7 @@ The script will retrieve a number of articles from the [News API](https://newsap
  - Execute the *get_news_api.py* script
 
 ## Server
-Node.js and npm are required. After installing these dependencies, clone the repo locally and follow the steps below:
+*Node.js* and *npm* are required. Make sure they are installed, then clone the repo locally and follow the steps below:
  - Go to *server* directory and install the server's dependencies using `npm i`
  - Set up the required variables inside the *.env* file
  - Spin up the server using `npm start` for production mode or `npm run dev` for development mode.
