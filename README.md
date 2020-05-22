@@ -48,7 +48,7 @@ Steps to build and spin up the different modules of the application.
 
 ## Python script to retrieve news articles using News API
 The script will retrieve a number of articles from the [News API](https://newsapi.org/) and store them to an *Elasticsearch* cloud instance. Make sure you have *Python 3* and *pip* installed and follow the steps below:
- - Install the dependencies listed in the requirements.txt file inside the *server* directory using `pip install` command
+ - Install the dependencies listed in the *requirements.txt* file inside the *server* directory using `pip install` command
  - Set up the required variables inside the *.env* file
  - Execute the *get_news_api.py* script
 
