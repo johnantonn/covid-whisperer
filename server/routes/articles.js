@@ -26,18 +26,18 @@ const client = new Client({
 *     {
 *       [
 *         {
-*           "source": 
+*           "source":
 *             [
 *               "id",
 *               "name"
 *             ],
 *           "author": "Mary Beth Griggs",
 *           "title": "No one knows when the COVID-19 pandemic will end",
-*           "description": "Even as states consider reopening and events are rescheduled, the uncomfortable truth is that we’re still a long way from the finish line. Vaccines and treatments are still early in development, and testing isn’t extensive enough to help us yet. We need to ge…",
+*           "description": "Even as states consider reopening and events are rescheduled..",
 *           "url": "https://www.theverge.com/2020/4/29/21239689/coronavirus-pandemic-end-covid19-reopen-vaccine-treatment-testing",
-*           "urlToImage": "https://cdn.vox-cdn.com/thumbor/1b70k6QrPQMTkdr4VOCaZCogA1Y=/0x186:3000x1757/fit-in/1200x630/cdn.vox-cdn.com/uploads/chorus_asset/file/19932095/VRG_Covid_Calendar_3995.0.jpg",
+*           "urlToImage": "https://cdn.vox-cdn.com/thumbor/VRG_Covid_Calendar_3995.0.jpg",
 *           "publishedAt": "2020-04-29T12:30:00Z",
-*           "content": "Illustration by Grayson Blackmon\n\n\n We’ve got to be ready for the long haul If you’ve been marking the pandemic by the pileup of cautious reopenings and rescheduled events, you might think that an end to this global disaster is in sight. Event planners for th… [+8793 chars]",
+*           "content": "Illustration by Grayson Blackmon\n\n\n We’ve got to be ready for..",
 *           "_id": "Huf4LnIBdv6aQgOEnEar"
 *         },
 *       ...
@@ -53,12 +53,12 @@ router.get("/", async (req, res) => {
     const hits = results.body.hits.hits;
     // Create article array
     const articleArray = [];
-    for(let i=0; i<hits.length; i++){
+    for (let i = 0; i < hits.length; i += 1) {
       const article = hits[i]._source;
       article._id = hits[i]._id;
       articleArray.push(article);
     }
-    return res.status(200).json({ ok: true, body: articleArray });
+    return res.status(200).json({ ok: true, articles: articleArray });
   } catch (error) {
     return res.status(500).json({ ok: false, message: error.message });
   }
@@ -74,19 +74,19 @@ router.get("/", async (req, res) => {
 * @apiSuccess {Array[Object]} the Article object.
 * @apiSuccessExample {json} Success-Response:
 *   {
-*     "source": 
+*     "source":
 *       [
 *         "id",
 *         "name"
 *       ],
-*     "author": "Mary Beth Griggs",
-*     "title": "No one knows when the COVID-19 pandemic will end",
-*     "description": "Even as states consider reopening and events are rescheduled, the uncomfortable truth is that we’re still a long way from the finish line. Vaccines and treatments are still early in development, and testing isn’t extensive enough to help us yet. We need to ge…",
-*     "url": "https://www.theverge.com/2020/4/29/21239689/coronavirus-pandemic-end-covid19-reopen-vaccine-treatment-testing",
-*     "urlToImage": "https://cdn.vox-cdn.com/thumbor/1b70k6QrPQMTkdr4VOCaZCogA1Y=/0x186:3000x1757/fit-in/1200x630/cdn.vox-cdn.com/uploads/chorus_asset/file/19932095/VRG_Covid_Calendar_3995.0.jpg",
-*     "publishedAt": "2020-04-29T12:30:00Z",
-*     "content": "Illustration by Grayson Blackmon\n\n\n We’ve got to be ready for the long haul If you’ve been marking the pandemic by the pileup of cautious reopenings and rescheduled events, you might think that an end to this global disaster is in sight. Event planners for th… [+8793 chars]",
-*     "_id": "Huf4LnIBdv6aQgOEnEar"
+*      "author": "Mary Beth Griggs",
+*      "title": "No one knows when the COVID-19 pandemic will end",
+*      "description": "Even as states consider reopening and events are rescheduled..",
+*      "url": "https://www.theverge.com/2020/4/29/21239689/coronavirus-pandemic-end-covid19-reopen-vaccine-treatment-testing",
+*      "urlToImage": "https://cdn.vox-cdn.com/thumbor/VRG_Covid_Calendar_3995.0.jpg",
+*      "publishedAt": "2020-04-29T12:30:00Z",
+*      "content": "Illustration by Grayson Blackmon\n\n\n We’ve got to be ready for..",
+*      "_id": "Huf4LnIBdv6aQgOEnEar"
 *   }
 */
 router.get("/:ARTICLE_ID/", async (req, res) => {
@@ -95,13 +95,11 @@ router.get("/:ARTICLE_ID/", async (req, res) => {
       id: req.params.ARTICLE_ID,
       index: process.env.ELASTICSEARCH_INDEX_NAME,
     });
-    console.log(results)
+    console.log(results);
     // Extract hits from results
     const article = results.body._source;
     article._id = results.body._id;
-    // Create article array
-        const articleArray = [];
-    return res.status(200).json({ ok: true, body: article });
+    return res.status(200).json({ ok: true, article });
   } catch (error) {
     return res.status(500).json({ ok: false, message: error.message });
   }
@@ -114,19 +112,19 @@ router.get("/:ARTICLE_ID/", async (req, res) => {
 * @apiGroup Articles
 * @apiParamExample {json} Body Example:
 *   {
-*     "source": 
+*     "source":
 *       [
 *         "id",
 *         "name"
 *       ],
-*     "author": "Mary Beth Griggs",
-*     "title": "No one knows when the COVID-19 pandemic will end",
-*     "description": "Even as states consider reopening and events are rescheduled, the uncomfortable truth is that we’re still a long way from the finish line. Vaccines and treatments are still early in development, and testing isn’t extensive enough to help us yet. We need to ge…",
-*     "url": "https://www.theverge.com/2020/4/29/21239689/coronavirus-pandemic-end-covid19-reopen-vaccine-treatment-testing",
-*     "urlToImage": "https://cdn.vox-cdn.com/thumbor/1b70k6QrPQMTkdr4VOCaZCogA1Y=/0x186:3000x1757/fit-in/1200x630/cdn.vox-cdn.com/uploads/chorus_asset/file/19932095/VRG_Covid_Calendar_3995.0.jpg",
-*     "publishedAt": "2020-04-29T12:30:00Z",
-*     "content": "Illustration by Grayson Blackmon\n\n\n We’ve got to be ready for the long haul If you’ve been marking the pandemic by the pileup of cautious reopenings and rescheduled events, you might think that an end to this global disaster is in sight. Event planners for th… [+8793 chars]"
-*   }
+*      "author": "Mary Beth Griggs",
+*      "title": "No one knows when the COVID-19 pandemic will end",
+*      "description": "Even as states consider reopening and events are rescheduled..",
+*      "url": "https://www.theverge.com/2020/4/29/21239689/coronavirus-pandemic-end-covid19-reopen-vaccine-treatment-testing",
+*      "urlToImage": "https://cdn.vox-cdn.com/thumbor/VRG_Covid_Calendar_3995.0.jpg",
+*      "publishedAt": "2020-04-29T12:30:00Z",
+*      "content": "Illustration by Grayson Blackmon\n\n\n We’ve got to be ready for..",
+*     }
 * @apiHeader {String="application/json"} Content-Type Content type of the request.
 * @apiSuccess {Array[Object]} the Article object.
 * @apiSuccessExample {json} Success-Response:
@@ -141,7 +139,7 @@ router.get("/:ARTICLE_ID/", async (req, res) => {
       index: process.env.ELASTICSEARCH_INDEX_NAME,
       body: req.body,
     });
-    return res.status(201).json({ ok: true, message: `Article created.` });
+    return res.status(201).json({ ok: true, message: "Article created." });
   } catch (error) {
     return res.status(500).json({ ok: false, message: error.message });
   }
@@ -154,18 +152,18 @@ router.get("/:ARTICLE_ID/", async (req, res) => {
 * @apiGroup Articles
 * @apiParamExample {json} Body Example:
 *   {
-*     "source": 
+*     "source":
 *       [
 *         "id",
 *         "name"
 *       ],
 *     "author": "Mary Beth Griggs",
 *     "title": "No one knows when the COVID-19 pandemic will end",
-*     "description": "Even as states consider reopening and events are rescheduled, the uncomfortable truth is that we’re still a long way from the finish line. Vaccines and treatments are still early in development, and testing isn’t extensive enough to help us yet. We need to ge…",
+*     "description": "Even as states consider reopening and events are rescheduled..",
 *     "url": "https://www.theverge.com/2020/4/29/21239689/coronavirus-pandemic-end-covid19-reopen-vaccine-treatment-testing",
-*     "urlToImage": "https://cdn.vox-cdn.com/thumbor/1b70k6QrPQMTkdr4VOCaZCogA1Y=/0x186:3000x1757/fit-in/1200x630/cdn.vox-cdn.com/uploads/chorus_asset/file/19932095/VRG_Covid_Calendar_3995.0.jpg",
+*     "urlToImage": "https://cdn.vox-cdn.com/thumbor/VRG_Covid_Calendar_3995.0.jpg",
 *     "publishedAt": "2020-04-29T12:30:00Z",
-*     "content": "Illustration by Grayson Blackmon\n\n\n We’ve got to be ready for the long haul If you’ve been marking the pandemic by the pileup of cautious reopenings and rescheduled events, you might think that an end to this global disaster is in sight. Event planners for th… [+8793 chars]"
+*     "content": "Illustration by Grayson Blackmon\n\n\n We’ve got to be ready for..",
 *   }
 * @apiParam {String} ARTICLE_ID Article's unique ID.
 * @apiHeader {String="application/json"} Content-Type Content type of the request.

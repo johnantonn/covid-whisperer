@@ -55,5 +55,10 @@
     "eslint-plugin-react-hooks": "^2.0.1",
     "nyc": "^15.0.1",
     "supertest": "^4.0.2"
+  },
+  "ava": {
+    "files": [
+      "test/*"
+    ]
   }
 }
