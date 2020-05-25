@@ -35,7 +35,14 @@ Elasticsearch server is used to store the articles retrieved by the online news 
 The back-end server was built using Node.js and Express.js with the purpose to server the incoming requests.
 
 ## Sentiment analysis module
-To be updated soon.
+Fake news differs in content quality and sentiments expressed from the truth. Compared to true news, fake news often carries a greater proportion of emotional (positive+negative) words. Sentiment Analysis refers to the use of NLP, text analysis and computational linguistics to determine the emotional state of the writer and the article. 
+
+The [VADER] (https://github.com/cjhutto/vaderSentiment) (Valence Aware Dictionary for Sentiment Reasoning) tool, a lexicon and rule-based sentiment analysis tool, was used to compute the sentiment score of each article. Vader provides a lexicon constructed using a combination of qualitative and quantitative methods. The lexical features are then combined with consideration for five general rules in sentence-level that embody grammatical and syntactical conventions. The score is computed by summing the valence scores of each word in the lexicon, adjusted according to the rules, and then normalized to be between *-1* (most extreme negative) and *+1* (most extreme positive). 
+
+Typical threshold values are:
+ - positive sentiment: *score >= 0.05*
+ - neutral sentiment: (*score > -0.05*) and (*score < 0.05*)
+ - negative sentiment: *score <= -0.05*
 
 ## Fake news detection module
 To be updated soon.
